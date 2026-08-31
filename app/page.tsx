@@ -100,7 +100,7 @@ const products: Product[] = [
     id: "p5",
     name: "CP Company Black",
     price: 129000,
-    category: "accessories",
+    category: "jackets",
     image: "/cp.png",
     sizes: ["One Size"],
     description: "Tote bag kanvas premium dengan ketahanan ekstra, zipper YKK kokoh, kompartemen laptop 14 inch, dan sablon grafis reflektif 3M.",

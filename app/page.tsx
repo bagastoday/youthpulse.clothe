@@ -1440,6 +1440,7 @@ export default function YouthPulsePage() {
                   <span className="text-2xl font-black text-[var(--foreground)]">{formatPrice(selectedProduct.price)}</span>
                   {selectedProduct.originalPrice && <span className="text-sm text-zinc-400 line-through">{formatPrice(selectedProduct.originalPrice)}</span>}
                 </div>
+                
                 <div className="mb-5">
                   <span className="text-[9px] font-label uppercase tracking-[0.2em] text-zinc-400 block mb-2.5">Pilih Ukuran</span>
                   <div className="flex flex-wrap gap-2">

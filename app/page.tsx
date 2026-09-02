@@ -50,18 +50,18 @@ const products: Product[] = [
     description: "Hoodie premium dengan bahan Heavy Cotton Fleece 375 gsm. Sablon discharge dengan grafis vektor detail tinggi bertema Hellfire. Didesain oversize dengan double-lined hood yang kokoh, nyaman, dan tahan lama untuk gaya jalanan harian.",
     badge: "BEST SELLER",
     rating: 5.0,
-    sold: 312,
+    sold: 500,
     colors: ["#1a1a1a", "#2d1515", "#15152d"],
     discount: 15,
   },
   {
     id: "p2",
     name: "Kappa Black",
-    price: 249000,
+    price: 1299999,
     category: "jacket",
     image: "/kappa.png",
     sizes: ["S", "M", "L", "XL"],
-    description: "Pacarmu kopros",
+    description: "good",
     badge: "LIMITED DROP",
     rating: 4.8,
     sold: 198,
@@ -71,7 +71,7 @@ const products: Product[] = [
   {
     id: "p3",
     name: "Stone Island Black Navy",
-    price: 699000,
+    price: 2990000,
     originalPrice: 799000,
     category: "jackets",
     image: "/si.png",
@@ -86,7 +86,7 @@ const products: Product[] = [
   {
     id: "p4",
     name: "Stone Island Grey",
-    price: 129000,
+    price: 2290000,
     category: "accessories",
     image: "/grey.png",
     sizes: ["One Size"],
@@ -99,7 +99,7 @@ const products: Product[] = [
     {
     id: "p5",
     name: "CP Company Black",
-    price: 129000,
+    price: 3990000,
     category: "jackets",
     image: "/cp.png",
     sizes: ["One Size"],
@@ -112,7 +112,7 @@ const products: Product[] = [
     {
     id: "p6",
     name: "Cream Stone Island",
-    price: 129000,
+    price: 2950000,
     category: "accessories",
     image: "/cream.png",
     sizes: ["One Size"],
@@ -149,7 +149,7 @@ const products: Product[] = [
     isNew: true,
   },
    {
-    id: "p6",
+    id: "p19",
     name: "Weekend Offender",
     price: 1290000,
     category: "accessories",
@@ -164,7 +164,7 @@ const products: Product[] = [
    {
     id: "p9",
     name: "Weekend Offender Hat",
-    price: 899000,
+    price: 1290000,
     category: "accessories",
     image: "/hat1.png",
     sizes: ["One Size"],
@@ -177,7 +177,7 @@ const products: Product[] = [
   {
     id: "p10",
     name: "Weekend Offender Hat",
-    price: 129000,
+    price: 1290000,
     category: "accessories",
     image: "/hat2.png",
     sizes: ["One Size"],
@@ -190,7 +190,7 @@ const products: Product[] = [
   {
     id: "p11",
     name: "Weekend Offender Hat",
-    price: 129000,
+    price: 1290000,
     category: "accessories",
     image: "/hat3.png",
     sizes: ["One Size"],
@@ -202,8 +202,8 @@ const products: Product[] = [
   },
   {
     id: "p12",
-    name: "Weekend Offender Hat",
-    price: 129000,
+    name: "Adidas Spezial Indigo",
+    price: 1850000,
     category: "accessories",
     image: "/hat4.png",
     sizes: ["One Size"],
@@ -216,7 +216,7 @@ const products: Product[] = [
   {
     id: "p13",
     name: "Adidas Spezial BW",
-    price: 129000,
+    price: 1850000,
     category: "accessories",
     image: "/adidasblackwhite.png",
     sizes: ["One Size"],
@@ -228,10 +228,23 @@ const products: Product[] = [
   },
   {
     id: "p14",
-    name: "adidasgazele",
-    price: 129000,
+    name: "Adidas Spezial Gazzele",
+    price: 1850000,
     category: "accessories",
     image: "/adidasgazele.png",
+    sizes: ["One Size"],
+    description: "Tote bag kanvas premium dengan ketahanan ekstra, zipper YKK kokoh, kompartemen laptop 14 inch, dan sablon grafis reflektif 3M.",
+    badge: "NEW ARRIVAL",
+    rating: 4.7,
+    sold: 145,
+    isNew: true,
+  },
+  {
+  id: "p15",
+    name: "Adidas Spezial Pink",
+    price: 1850000,
+    category: "accessories",
+    image: "/adidaspink.png",
     sizes: ["One Size"],
     description: "Tote bag kanvas premium dengan ketahanan ekstra, zipper YKK kokoh, kompartemen laptop 14 inch, dan sablon grafis reflektif 3M.",
     badge: "NEW ARRIVAL",
@@ -259,32 +272,38 @@ const categories = [
   { key: "accessories", label: "Accessories", icon: <Zap size={13} /> },
 ];
 
-const testimonials = [
+const orderSteps = [
   {
-    name: "Rizky Pratama",
-    role: "Streetwear Enthusiast",
-    text: "Hoodie Hellfire-nya gila sih. Bahan fleece-nya tebel banget, sablon nggak luntur meski udah dicuci berkali-kali. Worth every rupiah!",
-    rating: 5,
-    avatar: "RP",
-    color: "#c88a3e",
+    step: "01",
+    title: "Pilih Produk & Ukuran",
+    desc: "Jelajahi katalog streetwear YouthPulse, tentukan ukuran (S, M, L, XL) dan jumlah yang kamu inginkan.",
+    icon: <ShoppingBag size={22} className="text-amber-500" />,
+    badge: "Langkah 1",
   },
   {
-    name: "Aisha Maharani",
-    role: "Fashion Content Creator",
-    text: "Desainnya beneran original dan standout. Setiap kali pakai varsity jacket dari YouthPulse, pasti ditanya \"beli dimana?\". Quality-nya premium banget.",
-    rating: 5,
-    avatar: "AM",
-    color: "#9aa5b1",
+    step: "02",
+    title: "Tambah ke Keranjang",
+    desc: "Klik 'Tambah ke Keranjang' atau buka Quick View untuk memeriksa ringkasan item, varian, dan total harga belanjaanmu.",
+    icon: <Package size={22} className="text-amber-500" />,
+    badge: "Langkah 2",
   },
   {
-    name: "Dimas Ardiansyah",
-    role: "Urban Culture Blogger",
-    text: "Baru pertama kali nemu brand lokal yang konsepnya sekuat ini. Packaging-nya rapi, materialnya juara, dan desain vektornya tajam. Langsung repeat order!",
-    rating: 5,
-    avatar: "DA",
-    color: "#8f5a22",
+    step: "03",
+    title: "Checkout WhatsApp / Shopee",
+    desc: "Klik tombol Order via WhatsApp untuk konfirmasi chat otomatis dengan admin, atau checkout langsung di Official Shopee kami.",
+    icon: <MessageCircle size={22} className="text-amber-500" />,
+    badge: "Langkah 3",
+  },
+  {
+    step: "04",
+    title: "Pembayaran & Pengiriman",
+    desc: "Selesaikan pembayaran dan kirim bukti transfer. Pesananmu akan segera dikemas rapi dan dikirim dengan nomor resi aktif.",
+    icon: <Truck size={22} className="text-amber-500" />,
+    badge: "Langkah 4",
   },
 ];
+
+
 
 // ============================================================
 // HELPERS
@@ -365,24 +384,44 @@ function useCountUp(target: number, duration = 1800, start = false) {
 }
 
 // ============================================================
-// PARTICLES COMPONENT
+// PARTICLES COMPONENT (Deterministic to prevent SSR hydration errors)
 // ============================================================
+const STATIC_PARTICLES = [
+  { id: 0, left: '12%', delay: '0s', duration: '16s', size: 2.5, startY: '75vh' },
+  { id: 1, left: '28%', delay: '3s', duration: '22s', size: 1.8, startY: '85vh' },
+  { id: 2, left: '42%', delay: '7s', duration: '18s', size: 3.2, startY: '70vh' },
+  { id: 3, left: '65%', delay: '1s', duration: '25s', size: 2.0, startY: '90vh' },
+  { id: 4, left: '82%', delay: '5s', duration: '19s', size: 2.8, startY: '80vh' },
+  { id: 5, left: '94%', delay: '9s', duration: '23s', size: 1.6, startY: '72vh' },
+  { id: 6, left: '5%', delay: '2s', duration: '20s', size: 3.0, startY: '88vh' },
+  { id: 7, left: '35%', delay: '8s', duration: '17s', size: 2.2, startY: '78vh' },
+  { id: 8, left: '52%', delay: '4s', duration: '24s', size: 1.5, startY: '95vh' },
+  { id: 9, left: '73%', delay: '11s', duration: '21s', size: 2.7, startY: '82vh' },
+  { id: 10, left: '88%', delay: '6s', duration: '15s', size: 3.4, startY: '74vh' },
+  { id: 11, left: '19%', delay: '13s', duration: '26s', size: 1.9, startY: '92vh' },
+  { id: 12, left: '48%', delay: '10s', duration: '18s', size: 2.4, startY: '86vh' },
+  { id: 13, left: '60%', delay: '2.5s', duration: '20s', size: 3.1, startY: '76vh' },
+  { id: 14, left: '79%', delay: '12s', duration: '22s', size: 1.7, startY: '89vh' },
+  { id: 15, left: '23%', delay: '4.5s', duration: '17s', size: 2.9, startY: '81vh' },
+  { id: 16, left: '58%', delay: '7.5s', duration: '25s', size: 2.1, startY: '93vh' },
+  { id: 17, left: '91%', delay: '1.5s', duration: '19s', size: 2.6, startY: '84vh' },
+];
+
 function FloatingParticles() {
-  const particles = useMemo(() =>
-    Array.from({ length: 18 }, (_, i) => ({
-      id: i,
-      left: `${Math.random() * 100}%`,
-      delay: `${Math.random() * 15}s`,
-      duration: `${12 + Math.random() * 18}s`,
-      size: 1.5 + Math.random() * 2.5,
-      startY: `${70 + Math.random() * 30}vh`,
-    })), []
-  );
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {particles.map(p => (
-        <div key={p.id} className="particle"
+      {STATIC_PARTICLES.map((p) => (
+        <div
+          key={p.id}
+          className="particle"
           style={{
             left: p.left,
             top: p.startY,
@@ -390,7 +429,8 @@ function FloatingParticles() {
             height: p.size,
             animationDelay: p.delay,
             animationDuration: p.duration,
-          }} />
+          }}
+        />
       ))}
     </div>
   );
@@ -427,8 +467,7 @@ export default function YouthPulsePage() {
   const lookbookReveal = useScrollReveal(0.15);
   const lookbookImgReveal = useScrollReveal(0.15);
   const valuesReveal = useScrollReveal(0.1);
-  const testimonialReveal = useScrollReveal(0.1);
-  const newsletterReveal = useScrollReveal(0.15);
+  const orderReveal = useScrollReveal(0.1);
   const statsReveal = useScrollReveal(0.4);
 
   // Counter animations
@@ -719,7 +758,7 @@ export default function YouthPulsePage() {
 >
   <span className="block text-[var(--foreground)]">Premium</span>
   <span className="block text-gradient-hero">Original</span>
-  <span className="block text-[var(--foreground)]">100%</span>
+  <span className="block text-[var(--foreground)]">TIMELESS</span>
 </h1>
 
             <p className="text-zinc-600 text-sm md:text-base leading-relaxed mb-8 max-w-md font-light">
@@ -808,11 +847,11 @@ export default function YouthPulsePage() {
                 <div className="flex flex-col gap-2">
                   <span className="text-[9px] font-label tracking-[0.2em] px-3 py-1.5 uppercase text-white rounded-full shadow-md animate-glow-pulse"
                     style={{ background: 'linear-gradient(90deg,#c88a3e,#8f5a22)' }}>
-                    🔥 BEST SELLER
+                     BEST SELLER
                   </span>
                   <span className="text-[9px] font-label tracking-[0.2em] px-3 py-1.5 uppercase rounded-full shadow-md text-white"
                     style={{ background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(8px)' }}>
-                    ONLY {featuredProduct.sold}+ SOLD
+                     ONLY {featuredProduct.sold}+ SOLD
                   </span>
                 </div>
                 <div className="text-right">
@@ -885,8 +924,8 @@ export default function YouthPulsePage() {
           <div className="flex items-center gap-3">
             <Flame size={20} className="text-amber-500 animate-pulse" />
             <div>
-              <div className="text-[10px] font-label uppercase tracking-[0.25em] text-amber-500">DROP 02 · APOCALYPTIC VECTOR</div>
-              <div className="text-sm font-bold text-[var(--foreground)]">Hanya tersedia untuk member terdaftar</div>
+              <div className="text-[10px] font-label uppercase tracking-[0.25em] text-amber-500">FLASH SALE · 20% OFF</div>
+              <div className="text-sm font-bold text-[var(--foreground)]">AKAN TERSEDIA </div>
             </div>
           </div>
           <div className="flex gap-3 select-none">
@@ -925,7 +964,7 @@ export default function YouthPulsePage() {
               <span className="text-[9px] font-label uppercase tracking-[0.3em] text-amber-500">STOK TERSEDIA</span>
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-black uppercase tracking-tight">
-              FORSALE <span className="text-gradient-fire">· Live Now</span>
+              FORSALE <span className="text-gradient-fire"> ORIGINAL 100%</span>
             </h2>
             <p className="text-zinc-500 text-xs mt-1">{filtered.length} produk ditemukan{searchQuery && ` untuk "${searchQuery}"`}</p>
           </div>
@@ -1081,7 +1120,7 @@ export default function YouthPulsePage() {
               <span className="text-[9px] font-label uppercase tracking-[0.3em] text-amber-500">LIFESTYLE LOOKBOOK</span>
             </div>
             <h3 className="font-display text-4xl md:text-5xl font-black uppercase tracking-tight mb-5 leading-[1.0] text-[var(--foreground)]">
-              GUARANTE 100%<br /><span className="text-gradient-fire">ORIGINAL</span><br />KRIUK.
+              QUALITY IMPORT<br /><span className="text-gradient-fire">ORIGINAL</span><br />AUTHENTIC
             </h3>
             <p className="text-zinc-600 text-sm leading-relaxed mb-7 max-w-lg font-light">
               Pakaian adalah medium ekspresi diri. Kami merekam distorsi perkotaan dan menyerap energi dinamis jalanan untuk diterjemahkan ke dalam kain bertekstur dan desain kontras yang berbicara keras.
@@ -1096,9 +1135,9 @@ export default function YouthPulsePage() {
             className={`order-1 lg:order-2 relative group scroll-reveal-right ${lookbookImgReveal.revealed ? 'revealed' : ''}`}>
             <div className="absolute inset-0 transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-2 pointer-events-none"
               style={{ border: '1px solid rgba(200, 138, 62,0.18)', top: '14px', left: '14px', right: '-14px', bottom: '-14px' }} />
-            <div className="relative overflow-hidden" style={{ border: '1px solid rgba(0,0,0,0.06)', aspectRatio: '16/10' }}>
+            <div className="relative overflow-hidden" style={{ border: '1px solid rgba(0,0,0,0.06)', aspectRatio: '4/4' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/spzl.jpg" alt="YouthPulse Lookbook"
+              <img src="/hat3.png" alt="YouthPulse Lookbook"
                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                 style={{ filter: 'saturate(0.7) contrast(1.1)' }} />
               <div className="absolute inset-0" style={{ background: 'linear-gradient(to top,rgba(0,0,0,0.6) 0%,transparent 60%)' }} />
@@ -1120,195 +1159,179 @@ export default function YouthPulsePage() {
       </section>
 
       {/* ================================================
-          BRAND VALUES
+          BRAND VALUES / KEUNGGULAN
       ================================================ */}
       <section id="filosofi" className="py-20 px-5 max-w-7xl mx-auto z-10 relative">
         <div ref={valuesReveal.ref}
           className={`text-center mb-12 scroll-reveal ${valuesReveal.revealed ? 'revealed' : ''}`}>
-          <span className="text-[9px] font-label uppercase tracking-[0.3em] text-amber-500 block mb-3">FILOSOFI KUALITAS</span>
+          <div className="inline-flex items-center gap-2 mb-3 px-4 py-2"
+            style={{ background: 'rgba(200, 138, 62,0.08)', border: '1px solid rgba(200, 138, 62,0.2)' }}>
+            <Sparkles size={12} className="text-amber-500" />
+            <span className="text-[9px] font-label uppercase tracking-[0.3em] text-amber-500">KEUNGGULAN BRAND</span>
+          </div>
           <h3 className="font-display text-3xl md:text-4xl font-black uppercase tracking-tight text-[var(--foreground)]">
-            Mengapa KRIUK <span className="text-gradient-hero">YOUTHPULSE</span>?
+            KENAPA MEMILIH <span className="text-gradient-hero">YOUTHPULSE</span>?
           </h3>
+          <p className="text-zinc-600 text-xs mt-2 max-w-lg mx-auto leading-relaxed">
+            Dedikasi kami pada material berstandar ekspor, karya desain orisinal, dan produksi eksklusif terbatas untuk gaya streetwear terbaikmu.
+          </p>
         </div>
-        <div className={`grid grid-cols-1 md:grid-cols-3 gap-5 stagger-children ${valuesReveal.revealed ? 'revealed' : ''}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children ${valuesReveal.revealed ? 'revealed' : ''}`}>
           {[
-            { icon: <Zap size={24} className="text-amber-500" />, title: 'Desain Vektor Presisi', desc: 'Grafis HD/4K ultra sharp — sablon plastisol premium yang tidak pernah blur bahkan setelah ratusan kali cuci.', glow: 'rgba(232, 193, 121,0.08)', border: 'rgba(232, 193, 121,0.15)' },
-            { icon: <Shield size={24} className="text-slate-500" />, title: 'Material Tangguh', desc: 'Cotton Combed 24s hingga Heavy Fleece 375gsm — dipilih secara ketat untuk kenyamanan dan ketahanan jangka panjang.', glow: 'rgba(154, 165, 177,0.08)', border: 'rgba(154, 165, 177,0.15)' },
-            { icon: <Target size={24} className="text-amber-500" />, title: 'Edisi Terbatas', desc: 'Setiap desain diproduksi dalam jumlah terbatas. Originalitas terjamin — tidak ada dua orang berpakaian identik.', glow: 'rgba(200, 138, 62,0.08)', border: 'rgba(200, 138, 62,0.15)' },
-          ].map(({ icon, title, desc, glow, border }) => (
-            <div key={title} className="glass-card group p-8 flex flex-col items-center text-center cursor-default">
-              <div className="w-14 h-14 flex items-center justify-center mb-5 transition-all duration-400 group-hover:scale-110"
-                style={{ background: glow, border: `1px solid ${border}`, boxShadow: `0 0 20px ${glow}` }}>
-                {icon}
+            {
+              icon: <Award size={24} className="text-amber-500" />,
+              badge: 'PREMIUM FABRIC',
+              title: 'Material Standar Ekspor',
+              desc: 'Menggunakan Heavy Cotton Fleece 375gsm & Cotton Combed 24s pilihan. Serat kain padat, lembut di kulit, adem dipakai seharian, dan tidak mudah melar.',
+              highlight: '✓ Nyaman, Lembut & Awet',
+              glow: 'rgba(200, 138, 62, 0.08)',
+              border: 'rgba(200, 138, 62, 0.2)'
+            },
+            {
+              icon: <Shield size={24} className="text-amber-600" />,
+              badge: 'AUTHENTIC ARTWORK',
+              title: '100% Desain Orisinal',
+              desc: 'Setiap grafis dan tipografi dirancang orisinal oleh seniman visual internal. Konsep futuristik underground streetwear, bukan hasil template tiruan.',
+              highlight: '✓ Desain Otentik & Eksklusif',
+              glow: 'rgba(154, 165, 177, 0.08)',
+              border: 'rgba(154, 165, 177, 0.2)'
+            },
+            {
+              icon: <Flame size={24} className="text-amber-500" />,
+              badge: 'HIGH-DENSITY PRINT',
+              title: 'Sablon HD & Limited Drop',
+              desc: 'Teknologi sablon plastisol & discharge beresolusi tinggi dengan warna tajam. Diproduksi dalam jumlah terbatas per batch agar penampilanmu tetap eksklusif.',
+              highlight: '✓ Anti-Pecah & Edisi Terbatas',
+              glow: 'rgba(200, 138, 62, 0.08)',
+              border: 'rgba(200, 138, 62, 0.2)'
+            },
+          ].map(({ icon, badge, title, desc, highlight, glow, border }) => (
+            <div key={title} className="glass-card group p-8 flex flex-col justify-between text-center transition-all duration-400 hover:-translate-y-1.5 hover:shadow-xl">
+              <div>
+                <div className="w-14 h-14 mx-auto flex items-center justify-center mb-5 transition-all duration-400 group-hover:scale-110"
+                  style={{ background: glow, border: `1px solid ${border}`, boxShadow: `0 0 20px ${glow}` }}>
+                  {icon}
+                </div>
+                <span className="text-[9px] font-label uppercase tracking-[0.2em] text-amber-500 block mb-2">{badge}</span>
+                <h4 className="text-sm font-black uppercase tracking-tight text-[var(--foreground)] mb-3">{title}</h4>
+                <p className="text-zinc-600 text-xs leading-relaxed font-light mb-6">{desc}</p>
               </div>
-              <h4 className="text-sm font-black uppercase tracking-tight text-[var(--foreground)] mb-3">{title}</h4>
-              <p className="text-zinc-500 text-xs leading-relaxed font-light">{desc}</p>
+              <div className="pt-4 text-[10px] font-bold text-amber-600 uppercase tracking-wider" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
+                {highlight}
+              </div>
             </div>
           ))}
         </div>
       </section>
 
       {/* ================================================
-          TESTIMONIALS — NEW SECTION
+          HOW TO ORDER — CARA PEMESANAN
       ================================================ */}
-      <section className="py-20 px-5 z-10 relative" style={{ background: 'linear-gradient(180deg,#fbfaf7 0%,#faf9f6 50%,#fbfaf7 100%)' }}>
+      <section id="cara-order" className="py-20 px-5 z-10 relative" style={{ background: 'linear-gradient(180deg,#fbfaf7 0%,#faf9f6 50%,#fbfaf7 100%)' }}>
         <div className="divider-gradient mb-16" />
         <div className="max-w-7xl mx-auto">
-          <div ref={testimonialReveal.ref}
-            className={`text-center mb-14 scroll-reveal ${testimonialReveal.revealed ? 'revealed' : ''}`}>
+          <div ref={orderReveal.ref}
+            className={`text-center mb-14 scroll-reveal ${orderReveal.revealed ? 'revealed' : ''}`}>
             <div className="inline-flex items-center gap-2 mb-4 px-4 py-2"
-              style={{ background: 'rgba(154, 165, 177,0.08)', border: '1px solid rgba(154, 165, 177,0.2)' }}>
-              <Sparkles size={12} className="text-slate-500" />
-              <span className="text-[9px] font-label uppercase tracking-[0.3em] text-slate-500">APA KATA MEREKA</span>
+              style={{ background: 'rgba(200, 138, 62,0.08)', border: '1px solid rgba(200, 138, 62,0.2)' }}>
+              <Sparkles size={12} className="text-amber-500" />
+              <span className="text-[9px] font-label uppercase tracking-[0.3em] text-amber-500">PANDUAN PEMESANAN</span>
             </div>
             <h3 className="font-display text-3xl md:text-4xl font-black uppercase tracking-tight text-[var(--foreground)]">
-              Customer <span className="text-gradient-fire">Reviews</span>
+              HOW <span className="text-gradient-fire">TO ORDER?</span>
             </h3>
-            <p className="text-zinc-500 text-xs mt-2 max-w-md mx-auto">Testimoni asli dari customer yang sudah merasakan kualitas YouthPulse</p>
+            <p className="text-zinc-600 text-xs mt-2 max-w-md mx-auto leading-relaxed">
+              4 Langkah mudah dan praktis untuk memesan koleksi original YouthPulse favoritmu
+            </p>
           </div>
 
-          <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children ${testimonialReveal.revealed ? 'revealed' : ''}`}>
-            {testimonials.map((t, i) => (
-              <div key={i} className="testimonial-card p-7 relative">
-                <div className="quote-mark">&ldquo;</div>
-                <div className="relative z-10">
-                  {/* Stars */}
-                  <div className="flex gap-0.5 mb-4">
-                    {[1, 2, 3, 4, 5].map(s => (
-                      <Star key={s} size={13} className="fill-amber-400 text-amber-400" />
-                    ))}
+          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children ${orderReveal.revealed ? 'revealed' : ''}`}>
+            {orderSteps.map((s, i) => (
+              <div key={i} className="glass-card group p-7 relative flex flex-col justify-between transition-all duration-400 hover:-translate-y-1.5 hover:shadow-xl">
+                {/* Watermark Number */}
+                <div className="absolute top-4 right-4 font-display font-black text-4xl text-zinc-300/40 select-none group-hover:text-amber-500/20 transition-colors duration-300">
+                  {s.step}
+                </div>
+
+                <div>
+                  {/* Icon */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-12 h-12 flex items-center justify-center transition-all duration-400 group-hover:scale-110"
+                      style={{ background: 'rgba(200, 138, 62,0.08)', border: '1px solid rgba(200, 138, 62,0.2)', boxShadow: '0 0 20px rgba(200, 138, 62,0.08)' }}>
+                      {s.icon}
+                    </div>
                   </div>
 
-                  {/* Quote */}
-                  <p className="text-zinc-600 text-sm leading-relaxed mb-6 font-light italic">
-                    &ldquo;{t.text}&rdquo;
+                  <span className="text-[9px] font-label uppercase tracking-[0.2em] text-amber-500 block mb-2">
+                    {s.badge}
+                  </span>
+
+                  <h4 className="text-sm font-black uppercase tracking-tight text-[var(--foreground)] mb-3 leading-snug">
+                    {s.title}
+                  </h4>
+
+                  <p className="text-zinc-600 text-xs leading-relaxed font-light mb-6">
+                    {s.desc}
                   </p>
+                </div>
 
-                  {/* Author */}
-                  <div className="flex items-center gap-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '16px' }}>
-                    <div className="avatar-ring">
-                      <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-black text-white"
-                        style={{ background: `linear-gradient(135deg, ${t.color}, ${t.color}88)` }}>
-                        {t.avatar}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-sm font-bold text-[var(--foreground)]">{t.name}</div>
-                      <div className="text-[10px] text-zinc-500 font-medium">{t.role}</div>
-                    </div>
-                    <Verified size={14} className="text-amber-500 ml-auto" />
-                  </div>
+                <div className="pt-4 flex items-center justify-between text-[10px] font-bold text-zinc-400 uppercase tracking-wider" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
+                  <span>Tahap {s.step}</span>
+                  <ChevronRight size={12} className="text-amber-500 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Quick Help Box */}
+          <div className="mt-10 p-6 glass-card flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left"
+            style={{ border: '1px solid rgba(200, 138, 62,0.2)', background: 'linear-gradient(135deg,rgba(247,245,240,0.8),rgba(255,255,255,0.9))' }}>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full flex items-center justify-center text-amber-500 flex-shrink-0" style={{ background: 'rgba(200, 138, 62,0.1)' }}>
+                <MessageCircle size={18} />
+              </div>
+              <div>
+                <h5 className="text-xs font-bold uppercase text-[var(--foreground)]">Punya Pertanyaan Seputar Ukuran atau Stok?</h5>
+                <p className="text-[11px] text-zinc-600 font-light">Tim admin kami siap membantu proses pemesananmu 24/7 via WhatsApp.</p>
+              </div>
+            </div>
+            <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Halo Admin YouthPulse, saya mau tanya cara order & ketersediaan stok produk.")}`}
+              target="_blank" rel="noopener noreferrer"
+              className="btn-primary px-6 py-3 text-xs font-black tracking-widest flex items-center gap-2 whitespace-nowrap cursor-pointer flex-shrink-0">
+              <MessageCircle size={13} /> Chat Admin WhatsApp
+            </a>
           </div>
         </div>
         <div className="divider-gradient mt-16" />
       </section>
 
       {/* ================================================
-          NEWSLETTER
-      ================================================ */}
-      <section id="newsletter" className="py-16 px-5 z-10 relative scroll-mt-20">
-        <div ref={newsletterReveal.ref}
-          className={`max-w-4xl mx-auto relative overflow-hidden scroll-reveal-scale ${newsletterReveal.revealed ? 'revealed' : ''}`}
-          style={{ background: 'linear-gradient(135deg,rgba(247,245,240,0.95),rgba(240,238,233,0.98))', border: '1px solid rgba(200, 138, 62,0.2)', backdropFilter: 'blur(24px)' }}>
-          <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-amber-500/40" />
-          <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-amber-500/40" />
-          <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-amber-500/40" />
-          <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-amber-500/40" />
-          <div className="relative z-10 p-10 md:p-14 text-center">
-            <div className="inline-flex items-center gap-2 mb-5 px-4 py-2" style={{ background: 'rgba(200, 138, 62,0.08)', border: '1px solid rgba(200, 138, 62,0.2)' }}>
-              <Mail size={11} className="text-amber-500" />
-              <span className="text-[9px] font-label uppercase tracking-[0.25em] text-amber-500">Early Access Member</span>
-            </div>
-            <h3 className="font-display text-3xl font-black uppercase tracking-tight mb-2 text-[var(--foreground)]">
-              Akses Awal <span className="text-gradient-fire">Drop 02</span>
-            </h3>
-            <p className="text-zinc-500 text-sm font-light mb-8 max-w-md mx-auto">Daftar sekarang dan dapatkan notifikasi 24 jam sebelum publik, kode diskon eksklusif, dan gratis ongkir.</p>
-            {subscribed ? (
-              <div className="flex items-center justify-center gap-2 py-4 max-w-sm mx-auto" style={{ background: 'rgba(16,185,129,0.07)', border: '1px solid rgba(16,185,129,0.22)' }}>
-                <Check size={15} className="text-emerald-500" />
-                <span className="text-emerald-500 text-xs font-bold uppercase tracking-wider">Berhasil! Cek email Anda.</span>
-              </div>
-            ) : (
-              <form onSubmit={(e) => { e.preventDefault(); if (email) setSubscribed(true); }}
-                className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
-                <input type="email" value={email} onChange={e => setEmail(e.target.value)}
-                  placeholder="Masukkan email Anda..." required
-                  className="flex-grow text-xs px-5 py-4 text-zinc-900 placeholder-zinc-400 focus:outline-none transition-all"
-                  style={{ background: 'rgba(255,255,255,0.6)', border: '1px solid rgba(0,0,0,0.08)' }}
-                  onFocus={e => (e.currentTarget.style.borderColor = 'rgba(200, 138, 62,0.4)')}
-                  onBlur={e => (e.currentTarget.style.borderColor = 'rgba(0,0,0,0.08)')} />
-                <button type="submit" className="btn-primary px-8 py-4 text-xs font-black tracking-widest flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer">
-                  Daftar Sekarang <ArrowRight size={13} />
-                </button>
-              </form>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* ================================================
           FOOTER
       ================================================ */}
-      <footer className="relative z-10 pt-14 pb-8 px-5" style={{ background: 'rgba(245,243,238,0.98)', borderTop: '1px solid rgba(0,0,0,0.05)' }}>
+      <footer className="relative z-10 pt-16 pb-10 px-5" style={{ background: 'rgba(245,243,238,0.98)', borderTop: '1px solid rgba(0,0,0,0.06)' }}>
         <div className="max-w-7xl mx-auto">
-
-          {/* Instagram Feed Preview */}
-          <div className="mb-12">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-3">
-                <Camera size={16} className="text-amber-500" />
-                <div>
-                  <span className="text-[9px] font-label uppercase tracking-[0.25em] text-amber-500 block">Follow Us On Instagram</span>
-                  <span className="text-sm font-bold text-[var(--foreground)]">@youthpulse.clo</span>
-                </div>
-              </div>
-              <button className="btn-ghost px-4 py-2 text-[10px] font-bold tracking-widest flex items-center gap-2 cursor-pointer">
-                <ExternalLink size={11} /> Follow
-              </button>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              {[
-                { img: '/spzl.jpg', caption: 'Hellfire Hoodie' },
-                { img: '/nb.jpg', caption: 'Signature Tee' },
-                { img: '/ng480.png', caption: 'Varsity Jacket' },
-                { img: '/nb wehite.jpg', caption: 'Lookbook SS26' },
-              ].map(({ img, caption }, i) => (
-                <div key={i} className="instagram-grid-item group cursor-pointer"
-                  style={{ border: '1px solid rgba(0,0,0,0.05)', background: '#fbfaf7' }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={img} alt={caption} className="w-full h-full object-cover transition-all duration-500" />
-                  <div className="absolute bottom-0 left-0 right-0 p-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-[10px] font-bold text-white">{caption}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="divider-gradient mb-10" />
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
+            {/* Brand identity */}
             <div className="md:col-span-5">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 flex items-center justify-center font-black text-lg text-white"
+                <div className="w-10 h-10 flex items-center justify-center font-black text-lg text-white"
                   style={{ background: 'linear-gradient(135deg,#c88a3e,#8f5a22)', clipPath: 'polygon(0 0,100% 0,100% 72%,72% 100%,0 100%)' }}>Y</div>
                 <div>
-                  <div className="font-display text-base font-black tracking-tighter">YOUTH<span className="text-gradient-rose">PULSE</span><span className="text-zinc-500">.clo</span></div>
+                  <div className="font-display text-lg font-black tracking-tighter">YOUTH<span className="text-gradient-rose">PULSE</span><span className="text-zinc-500"></span></div>
                   <div className="text-[8px] font-bold tracking-[0.3em] text-zinc-500 uppercase">Est. 2026 · Indonesia</div>
                 </div>
               </div>
-              <p className="text-zinc-600 text-xs leading-relaxed max-w-xs">Streetwear independen asal Indonesia — seni visual tajam, material premium, orisinalitas tanpa kompromi.</p>
-              <div className="flex gap-2.5 mt-5">
+              <p className="text-zinc-600 text-xs leading-relaxed max-w-sm mb-6 font-light">
+                Streetwear independen asal Indonesia — menghadirkan karya seni visual tajam, material premium berkualitas ekspor, dan orisinalitas tanpa kompromi.
+              </p>
+              <div className="flex items-center gap-2.5">
                 {[
                   { icon: <Link size={14} />, label: 'Instagram', href: 'https://instagram.com/youthpulse.clo' },
                   { icon: <MessageCircle size={14} />, label: 'WhatsApp', href: `https://wa.me/${WHATSAPP_NUMBER}` },
                   { icon: <ShoppingBag size={14} />, label: 'Shopee', href: SHOPEE_STORE_URL },
                 ].map(({ icon, label, href }) => (
                   <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
-                    className="w-8 h-8 flex items-center justify-center cursor-pointer transition-all duration-300"
+                    className="w-9 h-9 flex items-center justify-center cursor-pointer transition-all duration-300"
                     style={{ background: 'rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.06)', color: 'rgba(115,115,125,1)' }}
                     onMouseEnter={e => { e.currentTarget.style.background = 'linear-gradient(135deg,#c88a3e,#8f5a22)'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.color = 'white'; }}
                     onMouseLeave={e => { e.currentTarget.style.background = 'rgba(0,0,0,0.03)'; e.currentTarget.style.borderColor = 'rgba(0,0,0,0.06)'; e.currentTarget.style.color = 'rgba(115,115,125,1)'; }}>
@@ -1317,32 +1340,46 @@ export default function YouthPulsePage() {
                 ))}
               </div>
             </div>
+
+            {/* Quick Navigation */}
             <div className="md:col-span-3">
               <h5 className="text-[9px] font-label uppercase tracking-[0.25em] text-[var(--foreground)] mb-4">Navigasi</h5>
               <ul className="space-y-2.5">
-                {[{ href: '#katalog', label: 'Katalog Produk' }, { href: '#filosofi', label: 'Filosofi' }, { href: '#lookbook', label: 'Lookbook' }, { href: '#newsletter', label: 'Early Access' }].map(({ href, label }) => (
-                  <li key={href}><a href={href} className="text-xs text-zinc-600 hover:text-amber-700 transition-colors flex items-center gap-2 group">
-                    <span className="w-0 h-px bg-amber-500 group-hover:w-3 transition-all duration-300" />{label}
-                  </a></li>
+                {[
+                  { href: '#katalog', label: 'Katalog Produk' },
+                  { href: '#filosofi', label: 'Keunggulan Brand' },
+                  { href: '#cara-order', label: 'Cara Order' },
+                  { href: '#lookbook', label: 'Lookbook Koleksi' },
+                ].map(({ href, label }) => (
+                  <li key={href}>
+                    <a href={href} className="text-xs text-zinc-600 hover:text-amber-700 transition-colors flex items-center gap-2 group">
+                      <span className="w-0 h-px bg-amber-500 group-hover:w-3 transition-all duration-300" />
+                      {label}
+                    </a>
+                  </li>
                 ))}
               </ul>
             </div>
+
+            {/* Contact & Support */}
             <div className="md:col-span-4">
               <h5 className="text-[9px] font-label uppercase tracking-[0.25em] text-[var(--foreground)] mb-4">Hubungi Kami</h5>
               <ul className="space-y-2.5 text-xs text-zinc-600">
-                <li>contact@youthpulse.clo</li>
-                <li>+62 821-2345-6789</li>
-                <li>@youthpulse.clo</li>
-                <li className="text-zinc-500 text-[10px] mt-3">Senin–Jumat · 09.00–17.00 WIB</li>
+                <li className="flex items-center gap-2"><Mail size={13} className="text-amber-500 flex-shrink-0" /> contact@youthpulse.clo</li>
+                <li className="flex items-center gap-2"><MessageCircle size={13} className="text-amber-500 flex-shrink-0" /> +62 812-3456-7890 (WhatsApp)</li>
+                <li className="flex items-center gap-2"><ExternalLink size={13} className="text-amber-500 flex-shrink-0" /> Official Shopee: YouthPulse Store</li>
+                <li className="text-zinc-500 text-[10px] pt-2 border-t border-black/5 mt-3">Layanan Chat & Pemesanan: 24/7 Aktif</li>
               </ul>
             </div>
           </div>
-          <div className="divider-gradient mb-5" />
+
+          <div className="divider-gradient mb-6" />
+
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
             <p className="text-zinc-500 text-[10px]">© 2026 YouthPulse.clo · All Rights Reserved.</p>
             <div className="flex gap-5 text-[10px] text-zinc-500">
-              {['Syarat & Ketentuan', 'Kebijakan Privasi', 'FAQ'].map(l => (
-                <span key={l} className="hover:text-zinc-700 cursor-pointer transition-colors">{l}</span>
+              {['Syarat & Ketentuan', 'Kebijakan Privasi', 'Garansi Produk', 'FAQ'].map(l => (
+                <span key={l} className="hover:text-zinc-800 cursor-pointer transition-colors">{l}</span>
               ))}
             </div>
           </div>
